@@ -35,3 +35,9 @@ buttons.forEach((button) => {
     delete activeSlide.dataset.active;
   });
 });
+
+
+
+//Logic to call Strapi API to fetch the tourdate data and populate the tourdates list
+
+

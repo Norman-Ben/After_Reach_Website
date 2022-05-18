@@ -227,7 +227,7 @@ ul {
     border: solid black 1px;
     width: 60%;
     padding: 20px;
-    
+    border-radius: 5px;
   }
 
   .navbar.navbar-mobile {
