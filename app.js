@@ -40,4 +40,10 @@ buttons.forEach((button) => {
 
 //Logic to call Strapi API to fetch the tourdate data and populate the tourdates list
 
+fetch('http://localhost:1337/api/tourdate')
+.then(response => response.json())
+.then(data => {
+  document.querySelector('.tourdates').innerHTML = data.data.attributes.ListOfShows
+})
+.catch(error => console.log(error));
 

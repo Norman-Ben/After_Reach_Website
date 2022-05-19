@@ -69,7 +69,6 @@
 }
 
 .musicvideo__wrapper {
-  max-height: auto;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -108,7 +107,7 @@
 
 .about__carousel {
   width: 90vw;
-  height: 60vh;
+  height: 50vh;
   position: relative;
   display: inline-block;
   top: 50%;
@@ -180,12 +179,29 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 70px 60px;
+  margin: 50px 60px;
   text-align: center;
 }
 
 ul {
   list-style: none;
+}
+
+.about__title {
+  padding-bottom: 30px;
+}
+
+.tourdates__wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 40px 30px;
+}
+
+.tourdates__title {
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 
@@ -295,6 +311,11 @@ ul {
     width: 100vw;
     height: 25vh;
   }
+
+  .tourdates__title {
+    padding-top: 30px;
+  }
+  
 }
 
 @media screen and (max-width: 600px) {
