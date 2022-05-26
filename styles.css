@@ -104,18 +104,39 @@
   margin: 30px;
 }
 
+.swiper__container {
+  display: grid;
+  place-items: center;
+  min-height: 90vh;
+}
+
 .swiper {
-  width: 600px;
-  height: 300px;
+  width: 80%;
+}
+
+.image__wrapper {
+  width: 100%;
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.image__wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .about__wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-self: center;
+  align-self: center;
   flex-wrap: wrap;
-  margin: 50px 60px;
+  margin: 50px 150px;
   text-align: center;
 }
 
@@ -138,6 +159,48 @@ ul {
   display: flex;
   justify-content: center;
   align-content: center;
+}
+
+.footer {
+  background: white;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  border-top: solid 2px black;
+  z-index: 0;
+}
+
+.footer__container {
+  display: flex;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 20px;
+  flex-direction: row;
+  font-size: 0.7rem;
+}
+
+.social__links {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.social__links img {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  display: flex;
+}
+
+.credits {
+  display: flex;
+  justify-items: left;
+  align-items: center;
 }
 
 @media screen and (max-width: 960px) {
@@ -241,6 +304,24 @@ ul {
   .tourdates__title {
     padding-top: 30px;
   }
+
+  .swiper__container {
+    min-height: 50vh;
+  }
+
+  .footer__container {
+    padding: 0 5px;
+  }
+
+  .social__links img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+  }
+
+  .about__wrapper {
+    margin: 30px 100px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -248,11 +329,37 @@ ul {
     width: 400px;
     height: 300px;
   }
+  .swiper__container {
+    min-height: 30vh;
+  }
+
+  .about__wrapper {
+    margin: 20px 80px;
+  }
 }
 
 @media screen and (max-width: 430px) {
   iframe {
     width: 300px;
     height: 200px;
+  }
+
+  .footer__container {
+    font-size: 0.5rem;
+  }
+
+  .footer__emblem {
+    max-width: 50%;
+    max-height: 50%;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .swiper__container {
+    min-height: 20vh;
+  }
+
+  .about__wrapper {
+    margin: 5px 20px;
   }
 }

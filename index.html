@@ -100,21 +100,44 @@
             </p>
         </div>
         <!-- SwiperJS Carousel main container -->
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                <div class="swiper-slide">Slide 4</div>
-                <div class="swiper-slide">Slide 5</div>
-                <div class="swiper-slide">Slide 6</div>
-                <div class="swiper-slide">Slide 7</div>
-                <div class="swiper-slide">Slide 8</div>
-                <div class="swiper-slide">Slide 9</div>
+        <div class="swiper__container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="image__wrapper">
+                            <img src="/media/ARActionShot1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image__wrapper">
+                            <img src="/media/ARGroupShot1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image__wrapper">
+                            <img src="/media/ARActionShot2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image__wrapper">
+                            <img src="/media/ARGroupShot2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image__wrapper">
+                            <img src="/media/ARActionShot3.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="image__wrapper">
+                            <img src="/media/ARGroupShot3.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
         </div>
     </section>
     <!-- end about section -->
@@ -127,6 +150,29 @@
         </div>
     </section>
     <!-- end tour section -->
+    <!-- start Footer section -->
+    <footer class="footer">
+        <div class="footer__container">
+            <img class="footer__emblem" src="/media/Black Emblem - No Background.png" alt="Emblem">
+            <div class="credits">
+                <p class="management">Managed by: Scott Canty |<span><a href="http://darknorthmedia.com/"
+                            target="_blank">
+                            Dark North Media</a></span>
+                    <br>Contact: <a href="mailto:Canty@Darknorthmedia.com">Canty@Darknorthmedia.com</a>
+                    <br>Website by: Ben Norman
+                </p>
+            </div>
+            <div class="social__links">
+                <a href="https://www.facebook.com/AfterReachBand" target="_blank">
+                    <img src="/media/facebook-logo.svg" alt="">
+                </a>
+                <a href="https://www.instagram.com/afterreach_band/" target="_blank">
+                    <img src="/media/instagram-logo.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!--CDN link and config for swiperJS (For Image Carousel)-->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper(".mySwiper", {
