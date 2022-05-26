@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
 </head>
 
@@ -35,7 +36,8 @@
                     <a href="#tour" class="navbar__links" id="tour-page">Tour</a>
                 </li>
                 <li class="navbar__item">
-                    <a href="https://afterreachband.bigcartel.com/" class="navbar__links" id="shop-page" target="_blank">Shop</a>
+                    <a href="https://afterreachband.bigcartel.com/" class="navbar__links" id="shop-page"
+                        target="_blank">Shop</a>
                 </li>
             </ul>
         </div>
@@ -97,23 +99,22 @@
                 to continue making noise to fully realise their musical vision with no compromises.
             </p>
         </div>
-        <div class="about__carousel" data-carousel>
-            <button class="carousel__button prev" data-carousel-button="prev">&#60;</button>
-            <button class="carousel__button next" data-carousel-button="next">&#62;</button>
-            <ul data-slides>
-                <li class="slide" data-active>
-                    <img src="/media/ActiveBandShot.png" alt="Band Action Image">
-                </li>
-                <li class="slide">
-                    <img src="/media/SillyBandShot.png" alt="Silly Band Image">
-                </li>
-                <li class="slide">
-                    <img src="/media/LightBandShot.png" alt="Light Band Image">
-                </li>
-                <li class="slide">
-                    <img src="/media/DarkBandShot.png" alt="Dark Band Image">
-                </li>
-            </ul>
+        <!-- SwiperJS Carousel main container -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
     <!-- end about section -->
@@ -126,6 +127,22 @@
         </div>
     </section>
     <!-- end tour section -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
     <script src="app.js"></script>
 </body>
 

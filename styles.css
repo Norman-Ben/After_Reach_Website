@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -84,13 +86,10 @@
   display: flex;
   justify-content: space-around;
   align-content: center;
-  
 }
 
 .apple__logo {
   width: 110px;
-  
-  
 }
 
 .spotify__logo {
@@ -105,72 +104,9 @@
   margin: 30px;
 }
 
-.about__carousel {
-  width: 90vw;
-  height: 50vh;
-  position: relative;
-  display: inline-block;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-}
-
-.carousel > ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-
-.slide {
-  position: absolute; 
-  opacity: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.slide > img {
-  display: block;
-  object-fit: cover;
-  object-position: center;
-  width: 100%;
-  height: 100%;
-}
-
-.slide[data-active] {
-  opacity: 1;
-}
-
-.carousel__button {
-  position: absolute;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  top: 50%;
-  z-index: 2;
-  transform: translateY(-50%);
-  cursor: pointer;
-  border-radius: 0.25rem;
-  padding: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.carousel__button:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-.carousel__button:focus {
-  background-color: rgba(0, 0, 0, 0.3);
-  outline: 0.5px solid black;
-}
-
-.carousel__button.prev {
-  left: 0.1rem;
-}
-
-.carousel__button.next {
-  right: 0.1rem;
+.swiper {
+  width: 600px;
+  height: 300px;
 }
 
 .about__wrapper {
@@ -204,7 +140,6 @@ ul {
   align-content: center;
 }
 
-
 @media screen and (max-width: 960px) {
   .navbar__container {
     display: flex;
@@ -228,7 +163,6 @@ ul {
     transition: all 1s;
   }
 
-
   .navbar__menu.mobile-view {
     background: white;
     top: 100%;
@@ -249,7 +183,6 @@ ul {
   .navbar.navbar-mobile {
     border-bottom: none;
   }
-
 
   #navbar__logo .logo {
     margin-left: 20px;
@@ -289,8 +222,6 @@ ul {
     cursor: pointer;
   }
 
-  
-
   .navbar__toggle .bar {
     display: block;
   }
@@ -307,26 +238,15 @@ ul {
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  .about__carousel {
-    width: 100vw;
-    height: 25vh;
-  }
-
   .tourdates__title {
     padding-top: 30px;
   }
-  
 }
 
 @media screen and (max-width: 600px) {
   iframe {
     width: 400px;
     height: 300px;
-  }
-
-  .about__carousel {
-    width: 100vw;
-    height: 15vh;
   }
 }
 
@@ -336,6 +256,3 @@ ul {
     height: 200px;
   }
 }
-
-
-
