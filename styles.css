@@ -14,6 +14,7 @@
   display: flex;
   align-items: center;
   font-size: 1.2rem;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   border-bottom: solid 2px black;
@@ -68,6 +69,10 @@
 .navbar__links:hover {
   font-size: 120%;
   transition: linear 0.125s;
+}
+
+.news__container {
+  margin: 60px 50px;
 }
 
 .musicvideo__wrapper {
@@ -167,6 +172,7 @@ ul {
   display: flex;
   align-items: center;
   font-size: 1.2rem;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   border-top: solid 2px black;
@@ -237,10 +243,18 @@ ul {
   }
 
   .navbar__menu.mobile-view a {
-    border: solid black 1px;
+    border-bottom: solid black 0.5px;
     width: 60%;
     padding: 20px;
-    border-radius: 5px;
+  }
+
+  .navbar__menu.mobile-view a:hover {
+    font-size: 100%;
+    transition: none;
+  }
+
+  .navbar__menu.mobile-view a:focus {
+    background-color: rgb(233, 233, 233);
   }
 
   .navbar.navbar-mobile {
