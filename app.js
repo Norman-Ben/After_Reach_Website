@@ -3,7 +3,7 @@ const menuLinks = document.querySelector('.navbar__menu');
 const navbar = document.querySelector('.navbar');
 const navLogo = document.querySelector('#navbar__logo');
 
-//Loigc to toggle the "hamburger" menu in the mobile view
+//Logic to toggle the "hamburger" menu in the mobile view
 const mobileMenuToggle = () => {
   menu.classList.toggle('is-active');
   menuLinks.classList.toggle('mobile-view');
@@ -31,7 +31,7 @@ const highlightMenu = () => {
   const aboutMenu = document.querySelector('#aboutus-page');
   const tourMenu = document.querySelector('#tour-page');
   let scrollPos = window.scrollY;
-  console.log(scrollPos); //<-- find the scroll position of the page
+  //console.log(scrollPos); //<-- find the scroll position of the page
 
   // adds 'highlight' class to my menu items
 
@@ -63,13 +63,15 @@ const highlightMenu = () => {
 window.addEventListener('scroll', highlightMenu);
 window.addEventListener('click', highlightMenu);
 
+// Close mobile menu when clicking on a menu item
+
 const hideMobileMenu = () => {
   const menuBars = document.querySelector('.is-active');
-  if (window.innerWidth < 768 && menuBars) {
-    menuBars.classList.toggle('is-active');
-    menuLinks.classList.remove('active');
+  if (window.innerWidth < 960 && menuBars) {
+    menu.classList.toggle('is-active');
+    menuLinks.classList.remove('mobile-view');
+    navbar.classList.remove('navbar-mobile');
   }
 };
-
 menuLinks.addEventListener('click', hideMobileMenu);
-menuLinks.addEventListener('click', hideMobileMenu);
+navLogo.addEventListener('click', hideMobileMenu);
