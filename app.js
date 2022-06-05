@@ -31,26 +31,26 @@ const highlightMenu = () => {
   const aboutMenu = document.querySelector('#aboutus-page');
   const tourMenu = document.querySelector('#tour-page');
   let scrollPos = window.scrollY;
-  //console.log(scrollPos); //<-- find the scroll position of the page
+  console.log(scrollPos); //<-- find the scroll position of the page
 
   // adds 'highlight' class to my menu items
 
-  if (window.innerWidth > 960 && scrollPos < 227) {
-    newsMenu.classList.add('highlight');
-    musicMenu.classList.remove('highlight');
-    return;
-  } else if (window.innerWidth > 960 && scrollPos < 1400) {
-    musicMenu.classList.add('highlight');
-    newsMenu.classList.remove('highlight');
-    aboutMenu.classList.remove('highlight');
-    return;
-  } else if (window.innerWidth > 960 && scrollPos < 2200) {
-    musicMenu.classList.remove('highlight');
+  if (window.innerWidth > 960 && scrollPos < 700) {
     aboutMenu.classList.add('highlight');
+    newsMenu.classList.remove('highlight');
+    return;
+  } else if (window.innerWidth > 960 && scrollPos < 1100) {
+    newsMenu.classList.add('highlight');
+    aboutMenu.classList.remove('highlight');
+    musicMenu.classList.remove('highlight');
+    return;
+  } else if (window.innerWidth > 960 && scrollPos < 1800) {
+    newsMenu.classList.remove('highlight');
+    musicMenu.classList.add('highlight');
     tourMenu.classList.remove('highlight');
     return;
-  } else if (window.innerWidth > 960 && scrollPos < 2525) {
-    aboutMenu.classList.remove('highlight');
+  } else if (window.innerWidth > 960 && scrollPos < 2100) {
+    musicMenu.classList.remove('highlight');
     tourMenu.classList.add('highlight');
     return;
   }

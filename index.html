@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -29,13 +28,13 @@
             </div>
             <ul class="navbar__menu">
                 <li class="navbar__item">
+                    <a href="#about" class="navbar__links" id="aboutus-page">About</a>
+                </li>
+                <li class="navbar__item">
                     <a href="#news" class="navbar__links" id="news-page">News</a>
                 </li>
                 <li class="navbar__item">
                     <a href="#music" class="navbar__links" id="music-page">Music</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="#about" class="navbar__links" id="aboutus-page">About</a>
                 </li>
                 <li class="navbar__item">
                     <a href="#tour" class="navbar__links" id="tour-page">Tour</a>
@@ -47,7 +46,65 @@
             </ul>
         </div>
     </nav>
-    <!-- end navbar section -->
+    <!-- End navbar section -->
+    <!-- Start About Section -->
+    <!-- SwiperJS Carousel main container -->
+    <div id="about"></div>
+    <div class="swiper__container">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="image__wrapper">
+                        <img src="/media/ARActionShot1.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="image__wrapper">
+                        <img src="/media/ARGroupShot1.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="image__wrapper">
+                        <img src="/media/ARActionShot2.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="image__wrapper">
+                        <img src="/media/ARGroupShot2.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="image__wrapper">
+                        <img src="/media/ARActionShot3.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="image__wrapper">
+                        <img src="/media/ARGroupShot3.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <!-- Swiper Container End -->
+    <section class="about__section" aria-label="About After Reach">
+        <div class="about__wrapper">
+            <p class="about__body">Raw, powerful and emotionally-fuelled. Hailing from London UK, After Reach deliver a
+                strong, uncensored narrative at the heart of their music, creating a destructive soundscape which
+                attacks at
+                an unrelenting pace.
+
+                Setting up a strong foundation in 2021 with their debut single “Afraid of the Wind”, After Reach are
+                ready
+                to continue making noise to fully realise their musical vision with no compromises.
+            </p>
+        </div>
+    </section>
+    <!-- end about section -->
+
     <!-- start news section -->
     <div id="news"></div>
     <section class="news__section">
@@ -100,63 +157,7 @@
         </div>
     </section>
     <!-- end music section -->
-    <!-- start about section -->
-    <div id="about"></div>
-    <section class="about__section" aria-label="About After Reach">
-        <div class="about__wrapper">
-            <h2 class="about__title">About After Reach</h2>
-            <p class="about__body">Raw, powerful and emotionally-fuelled. Hailing from London UK, After Reach deliver a
-                strong, uncensored narrative at the heart of their music, creating a destructive soundscape which
-                attacks at
-                an unrelenting pace.
 
-                Setting up a strong foundation in 2021 with their debut single “Afraid of the Wind”, After Reach are
-                ready
-                to continue making noise to fully realise their musical vision with no compromises.
-            </p>
-        </div>
-        <!-- SwiperJS Carousel main container -->
-        <div class="swiper__container">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="image__wrapper">
-                            <img src="/media/ARActionShot1.png" alt="">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="image__wrapper">
-                            <img src="/media/ARGroupShot1.png" alt="">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="image__wrapper">
-                            <img src="/media/ARActionShot2.png" alt="">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="image__wrapper">
-                            <img src="/media/ARGroupShot2.png" alt="">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="image__wrapper">
-                            <img src="/media/ARActionShot3.png" alt="">
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="image__wrapper">
-                            <img src="/media/ARGroupShot3.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </section>
-    <!-- end about section -->
     <!-- start tour section -->
     <div id="tour"></div>
     <section class="tour__section" aria-label="Tour Dates">
