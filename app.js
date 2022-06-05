@@ -75,3 +75,16 @@ const hideMobileMenu = () => {
 };
 menuLinks.addEventListener('click', hideMobileMenu);
 navLogo.addEventListener('click', hideMobileMenu);
+
+//Logic to toggle light and dark mode
+
+function toggleLightMode() {
+  let app = document.getElementsByTagName('Body')[0];
+  if (localStorage.lightMode == 'dark') {
+    localStorage.lightMode = 'light';
+    app.setAttribute('light-mode', light);
+  } else {
+    localStorage.lightMode = 'dark';
+    app.setAttribute('light-mode', dark);
+  }
+}
