@@ -31,7 +31,7 @@ const highlightMenu = () => {
   const aboutMenu = document.querySelector('#aboutus-page');
   const tourMenu = document.querySelector('#tour-page');
   let scrollPos = window.scrollY;
-  console.log(scrollPos); //<-- find the scroll position of the page
+  //console.log(scrollPos); //<-- find the scroll position of the page
 
   // adds 'highlight' class to my menu items
 
@@ -49,7 +49,7 @@ const highlightMenu = () => {
     musicMenu.classList.add('highlight');
     tourMenu.classList.remove('highlight');
     return;
-  } else if (window.innerWidth > 960 && scrollPos < 2100) {
+  } else if (window.innerWidth > 960 && scrollPos < 3000) {
     musicMenu.classList.remove('highlight');
     tourMenu.classList.add('highlight');
     return;
@@ -78,13 +78,21 @@ navLogo.addEventListener('click', hideMobileMenu);
 
 //Logic to toggle light and dark mode
 
-function toggleLightMode() {
-  let app = document.getElementsByTagName('Body')[0];
-  if (localStorage.lightMode == 'dark') {
-    localStorage.lightMode = 'light';
-    app.setAttribute('light-mode', light);
+function changeTheme() {
+  const root = document.documentElement;
+  const arLogo = document.querySelector('.logo');
+  const arEmblem = document.querySelector('.footer__emblem');
+  const theme = root.className === 'dark-mode' ? 'light-mode' : 'dark-mode';
+  root.className = theme;
+
+  //Set logo and emblem colors for the selected theme
+  if (theme === 'dark-mode') {
+    arLogo.src = '../media/White AR Text - No Background.png';
+    arEmblem.src = '../media/White Emblem - No Background.png';
   } else {
-    localStorage.lightMode = 'dark';
-    app.setAttribute('light-mode', dark);
+    arLogo.src = '../media/Black AR Text - No Background.png';
+    arEmblem.src = '../media/Black Emblem - No Background.png';
   }
 }
+
+document.querySelector('.theme-toggle').addEventListener('click', changeTheme);
