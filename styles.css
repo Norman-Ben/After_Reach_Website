@@ -110,7 +110,7 @@
   width: 20px;
   height: 20px;
   left: 4px;
-  bottom: 3px;
+  bottom: 2.76px;
   background: #fff;
   border-radius: 50%;
   transition: 0.4s;
@@ -366,6 +366,11 @@ ul {
   background-color: rgb(100, 100, 100);
 }
 
+.theme-svg {
+  margin-right: 10px;
+  margin-bottom: 1px;
+}
+
 @media screen and (max-width: 960px) {
   .navbar__container {
     display: flex;
@@ -430,6 +435,7 @@ ul {
   .theme__container {
     margin-right: 100px;
     z-index: 1000;
+    margin-bottom: 5px;
   }
 
   #navbar__logo .logo {
@@ -524,6 +530,11 @@ ul {
   .about__wrapper {
     margin: 30px 100px;
   }
+
+  .theme-svg {
+    margin-right: 10px;
+    margin-bottom: 6px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -570,5 +581,43 @@ ul {
 
   .theme__container {
     margin-right: 60px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root.dark-mode {
+    background-color: rgb(25, 25, 25);
+    color: white;
+  }
+
+  :root.dark-mode .navbar {
+    color: white;
+    background: black;
+    border-bottom: solid 2px white;
+  }
+
+  :root.dark-mode .navbar__links {
+    color: white;
+  }
+
+  :root.dark-mode .footer {
+    background: black;
+    color: white;
+    border-top: solid 2px white;
+  }
+
+  :root.dark-mode .music__links {
+    filter: invert(100%) sepia(73%) saturate(0%) hue-rotate(263deg)
+      brightness(107%) contrast(101%);
+  }
+
+  :root.dark-mode .social__links {
+    filter: invert(100%) sepia(73%) saturate(0%) hue-rotate(263deg)
+      brightness(107%) contrast(101%);
+  }
+
+  :root.dark-mode .theme-svg {
+    filter: invert(100%) sepia(73%) saturate(0%) hue-rotate(263deg)
+      brightness(107%) contrast(101%);
   }
 }

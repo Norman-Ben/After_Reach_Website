@@ -12,13 +12,21 @@ const mobileMenuToggle = () => {
 
 menu.addEventListener('click', mobileMenuToggle);
 
-//Logic to call Strapi API to fetch the tourdate data and populate the tourdates list
+//Logic to call Strapi API to fetch the tourdate data and populate the tourdates list and about section
 
 fetch('http://localhost:1337/api/tourdate')
   .then((response) => response.json())
   .then((data) => {
     document.querySelector('.tourdates').innerHTML =
       data.data.attributes.ListOfShows;
+  })
+  .catch((error) => console.log(error));
+
+fetch('http://localhost:1337/api/about')
+  .then((response) => response.json())
+  .then((data) => {
+    document.querySelector('.about__body').innerHTML =
+      data.data.attributes.aboutText;
   })
   .catch((error) => console.log(error));
 
@@ -96,3 +104,17 @@ function changeTheme() {
 }
 
 document.querySelector('.theme-toggle').addEventListener('click', changeTheme);
+
+//Detect system theme preference and set the theme accordingly
+function detectThemePreference() {
+  const darkThemeMq = window.matchMedia('(prefers-color-scheme: dark)');
+
+  if (darkThemeMq.matches) {
+    document.querySelector('.theme-switch').checked = true;
+    changeTheme();
+  } else {
+    document.querySelector('.theme-switch').checked = false;
+  }
+}
+
+detectThemePreference();
