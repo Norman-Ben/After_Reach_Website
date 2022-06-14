@@ -95,11 +95,15 @@ function changeTheme() {
 
   //Set logo and emblem colors for the selected theme
   if (theme === 'dark-mode') {
-    arLogo.src = '../media/White AR Text - No Background.png';
-    arEmblem.src = '../media/White Emblem - No Background.png';
+    arLogo.src =
+      'https://res.cloudinary.com/ddwqntr2x/image/upload/v1655223408/White_AR_Text_-_No_Background_xcwbr7.png';
+    arEmblem.src =
+      'https://res.cloudinary.com/ddwqntr2x/image/upload/v1655223413/White_Emblem_-_No_Background_df9eix.png';
   } else {
-    arLogo.src = '../media/Black AR Text - No Background.png';
-    arEmblem.src = '../media/Black Emblem - No Background.png';
+    arLogo.src =
+      'https://res.cloudinary.com/ddwqntr2x/image/upload/v1655223391/Black_AR_Text_-_No_Background_m4jdnz.png';
+    arEmblem.src =
+      'https://res.cloudinary.com/ddwqntr2x/image/upload/v1655223395/Black_Emblem_-_No_Background_vlwtoi.png';
   }
 }
 
