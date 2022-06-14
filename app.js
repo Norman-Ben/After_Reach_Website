@@ -14,7 +14,7 @@ menu.addEventListener('click', mobileMenuToggle);
 
 //Logic to call Strapi API to fetch the tourdate data and populate the tourdates list and about section
 
-fetch('http://localhost:1337/api/tourdate')
+fetch('https://young-temple-47213.herokuapp.com/api/tourdate')
   .then((response) => response.json())
   .then((data) => {
     document.querySelector('.tourdates').innerHTML =
@@ -22,7 +22,7 @@ fetch('http://localhost:1337/api/tourdate')
   })
   .catch((error) => console.log(error));
 
-fetch('http://localhost:1337/api/about')
+fetch('https://young-temple-47213.herokuapp.com/api/about')
   .then((response) => response.json())
   .then((data) => {
     document.querySelector('.about__body').innerHTML =
