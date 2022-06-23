@@ -1,2 +1,12 @@
 # Local Netlify folder
 .netlify
+# Ignore DS store files
+.DS_Store
+
+# Ignore Images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
