@@ -8,6 +8,28 @@
   scroll-behavior: smooth;
 }
 
+.html {
+  scrollbar-width: thin;
+  scrollbar-color: #e4e4e4 #3b3b3b;
+}
+
+html::-webkit-scrollbar {
+  width: 1vw;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #e4e4e49d;
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #e4e4e4df;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #3b3b3ba0;
+}
+
 .navbar {
   background: white;
   height: 120px;
